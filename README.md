@@ -1,53 +1,89 @@
-# 📘 Práticas Avaliadas - Programação Orientada a Objetos
+# 🚀 Exercícios de Programação Orientada a Objetos
 
-Este repositório contém três atividades práticas avaliadas desenvolvidas em Java, aplicando os conceitos de **Herança** e **Polimorfismo**.
-
----
-
-## 🚀 Atividade 01 - Sistema de Usuários
-
-### Descrição
-Implementação de um sistema para gerenciar usuários.  
-A classe **Administrador** herda da classe **Usuario**, conforme o diagrama de classes proposto.
-
-### Conceitos aplicados
-- Herança: `Administrador` estende `Usuario`
-- Polimorfismo: métodos sobrescritos para comportamentos específicos
+Este repositório contém três atividades práticas desenvolvidas em Java, aplicando conceitos fundamentais de **POO** como **herança**, **polimorfismo**, **validação** e **tratamento de exceções**.
 
 ---
 
-## 🚗 Atividade 02 - Sistema de Veículos
+## 1️⃣ Sistema de Usuários 👤
 
-### Descrição
-Sistema para gerenciar veículos.  
-A classe **CarroEletrico** herda da classe **Carro**, adicionando atributos e comportamentos relacionados à autonomia e recarga.
+### Objetivo
+Gerenciar usuários com atributos básicos e aplicar validações.
 
-### Conceitos aplicados
-- Herança: `CarroEletrico` estende `Carro`
-- Polimorfismo: redefinição de métodos para consumo e funcionamento
+### Funcionalidades
+- Classe `Usuario` com atributos como nome, email e senha.
+- Métodos `get` e `set` com validações.
+- Tratamento de dados inválidos via exceções.
+
+### Cenários de teste
+- Usuário válido criado com sucesso.
+- Usuário com email inválido.
+- Usuário com senha vazia ou curta.
+- Usuário com nome vazio.
 
 ---
 
-## 📩 Atividade 03 - Sistema de Notificações
+## 2️⃣ Sistema de Usuários 👤
 
-### Descrição
-Sistema para envio de notificações por **E-mail** e **SMS**.  
-As classes **NotificacaoEmail** e **NotificacaoSMS** herdam da classe **Notificacao**.
+### Objetivo
+Gerenciar usuários com atributos básicos e aplicar validações.
 
-### Conceitos aplicados
-- Herança: `NotificacaoEmail` e `NotificacaoSMS` estendem `Notificacao`
-- Polimorfismo: envio de mensagens com diferentes implementações
+### Funcionalidades
+- Classe `Usuario` com atributos como nome, email e senha.
+- Métodos `get` e `set` com validações.
+- Tratamento de dados inválidos via exceções.
+
+### Cenários de teste
+- Usuário válido criado com sucesso.
+- Usuário com email inválido.
+- Usuário com senha vazia ou curta.
+- Usuário com nome vazio.
+
+---
+
+## 3️⃣ Sistema de Notificações 📱
+
+### Objetivo
+Implementar envio de notificações por **Email** e **SMS**, aplicando **herança** e **polimorfismo**.
+
+### Estrutura
+- **Classe base `Notificacao`**
+  - Atributo: `destinatario`
+  - Métodos: construtor, `get/set`, `enviar(mensagem)`
+- **Subclasse `NotificacaoEmail`**
+  - Sobrescreve `enviar` para envio por email.
+- **Subclasse `NotificacaoSMS`**
+  - Sobrescreve `enviar` para envio por SMS.
+- **Classe `Validacao`**
+  - Valida mensagem (não nula/vazia).
+  - Valida destinatário (email ou telefone válido via regex).
+- **Classe `TestaNotificacoes`**
+  - Método `criarNotificacao(tipo, destinatario, mensagem)`.
+  - Testes com tipos válidos e inválidos.
+
+### Cenários de teste
+- Email válido.
+- SMS válido.
+- Mensagem vazia.
+- Destinatário vazio.
+- Tipo inexistente.
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
-- Linguagem: **Java**
-- Paradigma: **Programação Orientada a Objetos**
-- IDE: Eclipse / VS Code
+- **Java SE**
+- **POO (Herança, Polimorfismo, Encapsulamento)**
+- **Regex para validação**
+- **Tratamento de exceções (`try/catch`)**
 
 ---
 
-## ▶️ Como Executar
-1. Clone o repositório:
-   ```bash
-   git clone <url-do-repositorio>
+## 📌 Observações
+- Todos os exercícios foram feitos com foco em **boas práticas de programação**.
+- As mensagens de erro foram personalizadas para ficarem mais **amigáveis e informativas**.
+- Os commits foram registrados com ícones temáticos (🚗, 👤, 📱) para facilitar a identificação no histórico.
+
+---
+
+## 🎯 Conclusão
+Essas atividades consolidam os principais conceitos de **Programação Orientada a Objetos**, mostrando como aplicar validações, herança e polimorfismo em sistemas reais.
+
